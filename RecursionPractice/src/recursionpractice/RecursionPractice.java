@@ -18,4 +18,16 @@ public class RecursionPractice {
         
         
     }
+    
+    //Recursively calculates the nth number of the fibonacci sequence
+    public static int fibonacciNumbers(int n){
+        if(n <= 0){
+            return 0;
+        }else if(n == 1){
+            return 1;
+        }else{
+            return fibonacciNumbers(n - 1) + fibonacciNumbers(n - 2);
+        }
+    }
+    
 }
