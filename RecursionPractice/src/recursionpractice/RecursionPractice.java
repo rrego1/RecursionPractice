@@ -15,7 +15,7 @@ public class RecursionPractice {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println(multiplyByAdding(4,8));
+        System.out.println(gcd(12,9));
         
     }
     
@@ -41,7 +41,7 @@ public class RecursionPractice {
         }
     }
     
-    //calculate a*b without multiplying
+    //calculate a*b only using addition and subtraction
     public static int multiplyByAdding(int a, int b){
         if(b == 0){
             return 0;
@@ -49,6 +49,23 @@ public class RecursionPractice {
             return a;
         }else{
             return a + multiplyByAdding(a, b - 1);
+        }
+    }
+    
+    //find the greatest common divisor
+    public static int gcd(int i, int j){
+       if(i > j){
+           return gcdHelper(i, j, j);
+       }else{
+           return gcdHelper(j,i, i);
+       }
+    }
+    
+    public static int gcdHelper(int i, int j, int k){
+        if(i % k == 0 && j % k == 0){
+            return k;
+        }else{
+            return gcdHelper(i, j, k - 1);
         }
     }
 }
