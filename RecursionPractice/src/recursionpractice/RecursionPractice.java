@@ -15,7 +15,7 @@ public class RecursionPractice {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println(gcd(12,9));
+        System.out.println(factorial(7));
         
     }
     
@@ -66,6 +66,15 @@ public class RecursionPractice {
             return k;
         }else{
             return gcdHelper(i, j, k - 1);
+        }
+    }
+    
+    //calculates n!
+    public static int factorial(int n){
+        if(n <= 1){
+            return 1;
+        }else{
+            return n * factorial(n -1);
         }
     }
 }
