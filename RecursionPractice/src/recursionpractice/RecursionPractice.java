@@ -15,7 +15,7 @@ public class RecursionPractice {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        System.out.println(fibonacciNumbers(4));
         
     }
     
@@ -27,6 +27,17 @@ public class RecursionPractice {
             return 1;
         }else{
             return fibonacciNumbers(n - 1) + fibonacciNumbers(n - 2);
+        }
+    }
+    
+    //compute the sum of natural numbers up until n
+    public static int sum(int n){
+        if(n == 0){
+            return 0;
+        }else if(n == 1){
+            return 1;
+        }else{
+            return n + sum(n - 1);
         }
     }
     
