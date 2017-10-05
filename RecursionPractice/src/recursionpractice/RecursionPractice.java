@@ -15,7 +15,7 @@ public class RecursionPractice {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println(fibonacciNumbers(4));
+        System.out.println(multiplyByAdding(4,8));
         
     }
     
@@ -41,4 +41,14 @@ public class RecursionPractice {
         }
     }
     
+    //calculate a*b without multiplying
+    public static int multiplyByAdding(int a, int b){
+        if(b == 0){
+            return 0;
+        }else if(b == 1){
+            return a;
+        }else{
+            return a + multiplyByAdding(a, b - 1);
+        }
+    }
 }
